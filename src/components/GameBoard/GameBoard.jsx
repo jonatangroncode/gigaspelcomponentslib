@@ -2,24 +2,25 @@ import React from "react";
 import styles from "./GameBoard.module.css";
 import GameSquare from "../GameSquare";
 
-export const GameBoard = ({
-  size = 7,
-  coloredCells = [{ i: 5, color: "white" }],
-}) => {
+const GameBoard = ({ size = 7, coloredCells = [] }) => {
   return (
     <div
-      className={styles.gameBoard}
+      className={styles.bord}
       style={{
         gridTemplateColumns: `repeat(${size}, 40px)`,
         gridTemplateRows: `repeat(${size}, 40px)`,
       }}
     >
-      {Array.from({ length: size * size }, (_, i) => {
-        const found = coloredCells.find((c) => c.i === i);
-        const color = found ? found.color : "white";
+      {Array.from({ length: size }).map((_, row) =>
+        Array.from({ length: size }).map((_, col) => {
+          const found = coloredCells.find(
+            (c) => c.row === row && c.col === col
+          );
+          const color = found ? found.color : "white";
 
-        return <GameSquare i={i} key={i} playedColor={color} />;
-      })}
+          return <GameSquare playedColor={color} />;
+        })
+      )}
     </div>
   );
 };
