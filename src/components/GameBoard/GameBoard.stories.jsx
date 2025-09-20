@@ -1,7 +1,7 @@
-import GameBoard from "./GameBoard";
+import GameBoard from "./GameBoard.organism";
 
 export default {
-  title: "components/GameBoard",
+  title: "Components/GameBoard",
   component: GameBoard,
   parameters: {
     layout: "centered",
@@ -17,14 +17,14 @@ export const Default = {
 export const oneredcoinboard = {
   args: {
     size: 7,
-    coloredCells: [{ i: 43, color: "red" }],
+    coloredCells: [{ row: 6, col: 1, color: "red" }],
   },
 };
 
 export const oneyellowcoinboard = {
   args: {
     size: 7,
-    coloredCells: [{ i: 48, color: "yellow" }],
+    coloredCells: [{ row: 6, col: 1, color: "yellow" }],
   },
 };
 
@@ -32,11 +32,11 @@ export const boardwithcoins = {
   args: {
     size: 7,
     coloredCells: [
-      { i: 43, color: "red" },
-      { i: 48, color: "yellow" },
-      { i: 41, color: "yellow" },
-      { i: 34, color: "yellow" },
-      { i: 44, color: "red" },
+      { row: 6, col: 1, color: "red" },
+      { row: 6, col: 6, color: "yellow" },
+      { row: 5, col: 5, color: "yellow" },
+      { row: 4, col: 4, color: "yellow" },
+      { row: 5, col: 6, color: "red" },
     ],
   },
 };
