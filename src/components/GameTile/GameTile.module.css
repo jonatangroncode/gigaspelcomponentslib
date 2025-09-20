@@ -1,0 +1,8 @@
+.tile {
+  aspect-ratio: 1 / 1;
+  min-width: 10px;
+  max-width: 50px;
+  width: 80%;
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+}

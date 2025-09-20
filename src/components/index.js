@@ -1,5 +1,7 @@
-export { Button } from "./components/Buttton";
+export { Button } from "./Button/Button";
 
-export { Bord } from "./components/Bord";
+export { GameBoard } from "./GameBoard/GameBoard.organism";
 
-export { BordTile } from "./components/BordTile";
+export { GameTile } from "./GameTile/GameTile.atom";
+
+export { GameSquare } from "./GameSquare/GameSquare.molecule";

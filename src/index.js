@@ -1,3 +1,4 @@
 export { Button } from "./components";
-export { Bord } from "./components";
-export { BordTile } from "./components";
+export { GameTile } from "./components";
+export { GameBoard } from "./components";
+export { GameSquare } from "./components";
